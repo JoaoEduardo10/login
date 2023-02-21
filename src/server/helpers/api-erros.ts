@@ -16,6 +16,12 @@ export class Not_Found extends ApiErros {
   }
 }
 
+export class Anouthorized extends ApiErros {
+  constructor(message: string) {
+    super(message, 401);
+  }
+}
+
 export class Internal_Server_Error extends ApiErros {
   constructor(message: string) {
     super(message, 500);

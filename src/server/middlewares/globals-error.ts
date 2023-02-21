@@ -8,7 +8,6 @@ export const globalsErros = async (
   next: NextFunction
 ) => {
   const statusCode = error.statusCode ?? 500;
-  const message = error.statusCode ? error.message : "internal server error";
 
-  return res.status(statusCode).json({ message });
+  return res.status(statusCode).json({ message: error.message });
 };
